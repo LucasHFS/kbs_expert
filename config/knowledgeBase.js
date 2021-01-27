@@ -68,23 +68,22 @@ var domain   = expert.Domain(),
 
 //Export
 module.exports = {
-   kb : {
-      mammal,
-      fish,
+   doe : {
       dog,
       cat,
       mouse,
       whale,
       salmon,
+      
+   },
+
+   sin : {
+      mammal,
+      fish,
       fur,
       eyes,
       bark,
       swim,
-      salmon,
-      whale,
-      dog,
-      cat,
-      mouse,  
    },
 
    verb: {
