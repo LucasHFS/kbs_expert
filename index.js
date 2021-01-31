@@ -56,7 +56,7 @@ function addSintomas(){
     clear();
     console.log("\n---------------- NOME DO SINTOMA A SER ADICIONADO ----------------")
     let sintoma = readline.question("\nDigite um Sintoma: ");
-    sintomas = [...sintomas, sintoma.toLowerCase()];
+    sintomas = [...sintomas, sintoma];
     console.log("\n",sintomas, "\n");
     loadDoencas();
 }
@@ -88,7 +88,7 @@ function loadDoencas(){
     var sins = new Array();
 
     sintomas.forEach(sintoma => {
-        sins = [...sins, sin[sintoma]]
+        sins = [...sins, sin[sintoma.replace(/ /g,"_").toLowerCase()]]
     })
 
     try {

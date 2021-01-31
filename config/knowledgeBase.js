@@ -28,8 +28,8 @@ var domain = expert.Domain(),
    //Sintomas
 
    febre = Concept.create({ id: "febre" }),
-   dorDeCabeça = Concept.create({ id: "Dor de cabeça" }),
-   tosseSeca = Concept.create({ id: "Tosse seca" }),
+   dor_de_cabeça = Concept.create({ id: "Dor de cabeça" }), //Favor Utilizar esse padrão de variável quando tiver mais de 1 palavra abc_de_dsldk
+   tosse_seca = Concept.create({ id: "Tosse seca" }),
    cansaco = Concept.create({ id: "Cansaço" }),
    dorDeGarganta = Concept.create({ id: "Dor de Garganta" }),
    calafrios = Concept.create({ id: "Calafrios" }),
@@ -72,12 +72,12 @@ var domain = expert.Domain(),
 //Knowledge Base          
 covid19
    .has(febre)
-   .has(tosseSeca)
+   .has(tosse_seca)
    .has(cansaco);
 
 gripe
    .has(febre)
-   .has(dorDeCabeça)
+   .has(dor_de_cabeça)
    .has(dorDeGarganta);
 
 resfriado
@@ -114,8 +114,8 @@ module.exports = {
 
    sin: {
       febre,
-      dorDeCabeça,
-      tosseSeca,
+      dor_de_cabeça,
+      tosse_seca,
       cansaco,
       dorDeGarganta,
       calafrios,
