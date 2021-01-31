@@ -28,7 +28,7 @@ var domain = expert.Domain(),
    //Sintomas
 
    febre = Concept.create({ id: "febre" }),
-   dorDeCabeça = Concept.create({ id: "Dor de Cabeça" }),
+   dorDeCabeça = Concept.create({ id: "Dor de cabeça" }),
    tosseSeca = Concept.create({ id: "Tosse seca" }),
    cansaco = Concept.create({ id: "Cansaço" }),
    dorDeGarganta = Concept.create({ id: "Dor de Garganta" }),
@@ -66,45 +66,26 @@ var domain = expert.Domain(),
 
 
    // Verbs
-   isa = domain.isa,
-   example = domain.example,
-
-   has = Relation.create({ id: "tem" }),
-   isSevere = Relation.create({ id: "É grave" }),
-   isNotSevere = Relation.create({ id: "Não é grave", inverseFor: isSevere }),
-
-   can = Relation.create({ id: "can" }),
-   whatCan = Relation.create({ id: "what can", inverseFor: can }),
-
-   biggerThan = Relation.create({ id: "biggerThan", isTransitive: true });
-smallerThan = Relation.create({ id: "smallerThan", isTransitive: true, inverseFor: biggerThan });
-
-
+   has = Relation.create({id:"has"}),
+   whatHas = Relation.create({id:"what has",inverseFor:has});
+   
 //Knowledge Base          
 covid19
-   .isa(this.doe)
-   .has(isSevere)
    .has(febre)
    .has(tosseSeca)
    .has(cansaco);
 
 gripe
-   .isa(this.doe)
-   .has(isNotSevere)
    .has(febre)
    .has(dorDeCabeça)
    .has(dorDeGarganta);
 
 resfriado
-   .isa(this.doe)
-   .has(isNotSevere)
    .has(espirros)
    .has(congestaoNasal)
    .has(corrimentoNasal);
 
 riniteAlergica
-   .isa(this.doe)
-   .has(isNotSevere)
    .has(corrimentoNasal)
    .has(obstrucaoNasal)
    .has(espirros);
@@ -173,7 +154,7 @@ module.exports = {
    },
 
    verb: {
-      isa,
       has,
+      whatHas
    }
 };

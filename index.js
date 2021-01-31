@@ -56,7 +56,7 @@ function addSintomas(){
     clear();
     console.log("\n---------------- NOME DO SINTOMA A SER ADICIONADO ----------------")
     let sintoma = readline.question("\nDigite um Sintoma: ");
-    sintomas = [...sintomas, sintoma];
+    sintomas = [...sintomas, sintoma.toLowerCase()];
     console.log("\n",sintomas, "\n");
     loadDoencas();
 }
