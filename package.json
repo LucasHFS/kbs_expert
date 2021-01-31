@@ -13,6 +13,7 @@
       "ai"
    ],
    "dependencies": {
+      "clear": "^0.1.0",
       "prompt": "^1.1.0",
       "readline-sync": "^1.4.10",
       "underscore": "*"

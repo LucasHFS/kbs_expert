@@ -1,19 +1,25 @@
 var expert = require("./lib/expert.js");
-    _ = require('underscore');
 
-var {doe, sin, verb} = require('./config/knowledgeBase');
+_ = require('underscore');
 
 var readline = require('readline-sync');
 
-var sintomas = [], possiveis_doencas = [];
+var clear = require('clear');
+
+var {doen, sin, verb} = require('./config/knowledgeBase');
+
+var sintomas = [], possiveis_doencas = [], index;
 
 
 function getOption(){
-    console.log("\n---------------- SINTOMAS CADASTRADOS ----------------");
-    console.log("\n",sintomas, "\n");
+    showDatas();
+    
     console.log("\n---------------- M E N U  D E  A Ç Õ E S ----------------")
-    let option = ['Adicionar um Sintoma', 'Remover um Sintoma', 'Pesquisar Doenças Relacionadas', 'Zerar Doenças'];
-    let index = 1 + readline.keyInSelect(option, 'Selecione uma Ação:');
+    
+    let option = ['Adicionar um Sintoma', 'Remover um Sintoma', 'Zerar Doenças'];
+
+    index = 1 + readline.keyInSelect(option, 'Selecione uma Ação:');
+
     if(index !== 0){
         switch(index){
             case 1: addSintomas();
@@ -40,76 +46,74 @@ function main(){
     getOption();
     while(index !== 0){
         getOption();
+        clear();
     }
     
    
 }
 
 function addSintomas(){
-    console.log("\n---------------- S I N T O M A ----------------")
+    clear();
+    console.log("\n---------------- NOME DO SINTOMA A SER ADICIONADO ----------------")
     let sintoma = readline.question("\nDigite um Sintoma: ");
     sintomas = [...sintomas, sintoma];
     console.log("\n",sintomas, "\n");
-    console.log("\n", "Possíveis Doenças",possiveis_doencas, "\n");
+    loadDoencas();
 }
 
 function removerSintomas(){
-    console.log("\n---------------- S I N T O M A ----------------")
+    clear();
+    console.log("\n---------------- SELECIONE O SINTOMA PARA REMOÇÃO ----------------")
     let indexSintoma = readline.keyInSelect(sintomas, 'Selecione um Sintoma:');
 
     if(indexSintoma >= 0){
         let boolYesOrEmpty = readline.keyInYN();
 
-        if(boolYesOrEmpty)
-            //TODO: remove this fucking Index
-            array.splice(indexSintoma, 1);
-
-        console.log("\n",sintomas, "\n");
+        if(boolYesOrEmpty){
+            sintomas.splice(indexSintoma, 1);
+            loadDoencas();
+        }
     }
 }
 
 function resetSintomas(){
-    boolYesOrEmpty = readline.keyInYN()
-    if(boolYesOrEmpty)
+    let boolYesOrEmpty = readline.keyInYN()
+    if(boolYesOrEmpty){
         sintomas = [];
+        possiveis_doencas = [];
+    }
 }
 
 function loadDoencas(){
+    var sins = new Array();
 
+    sintomas.forEach(sintoma => {
+        sins = [...sins, sin[sintoma]]
+    })
+
+    try {
+        possiveis_doencas = verb.whatHas(sins);
+    }catch(e){
+        console.log("Sintoma não cadastrado em nossas bases de dados. Favor Verificar a Nomenclatura digitada!")
+    }
+}
+
+function showDatas(){
+    console.log("\n---------------- SINTOMAS CADASTRADOS ----------------\n");
+    
+    if(sintomas.length > 0){
+        console.log(sintomas, "\n");
+    }else{
+        console.log("Nenhum Sintoma Adicionado a Busca")
+    }
+
+    console.log("\n---------------- POSSÍVEIS DOENÇAS ----------------\n");
+
+    if(possiveis_doencas.length > 0){
+        console.log(_.map( possiveis_doencas, function(c){ return c.id; }));
+    }else{
+        console.log("Nenhuma Doença com esse(s) sintoma(s) foi encontrada");
+    }
 }
 
 main();
-
-
-
-// Search
-
-// const keywordArr = ['jim', 'john'];
-
-// const message = 'Hello john, how are you doing today?'
-
-// let has = keywordArr.reduce((r,v) => message.toLowerCase().includes(v.toLowerCase()) || r, false)
-
-// console.log(has)
-
-
-
-
-
-
-
-console.log("what has fur?");
-
-var answer1 = verb.whatHas(sin.fur);
-
-console.log(_.map( answer1, function(c){ return c.id; }));
-
-console.log("what mammal that a mouse is smaller than, can swim?");
-
-var answer2 = _.intersection( verb.example(sin.mammal),
-                              verb.whatCan(sin.swim),
-                              verb.smallerThan(doe.mouse) );
-
-console.log(answer2)
-
-console.log(_.map( answer2, function(c){ return c.id; }));
