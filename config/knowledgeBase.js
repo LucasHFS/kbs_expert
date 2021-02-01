@@ -12,63 +12,63 @@ var domain = expert.Domain(),
    gripe = Concept.create({ id: "Gripe" }),
    pneumonia = Concept.create({ id: "Pneumonia" }),
    resfriado = Concept.create({ id: "Resfriado" }),
-   riniteAlergica = Concept.create({ id: "Rinite alérgica" }),
+   rinite_alergica = Concept.create({ id: "Rinite alérgica" }),
    asma = Concept.create({ id: "Asma" }),
-   ataqueCardiaco = Concept.create({ id: "Ataque Cardíaco" }),
-   derrameCerebral = Concept.create({ id: "AVC / Derrame Cerebral" }),
+   ataque_cardiaco = Concept.create({ id: "Ataque Cardíaco" }),
+   derrame_cerebral = Concept.create({ id: "AVC / Derrame Cerebral" }),
    meningite = Concept.create({ id: "Meningite" }),
    enxaqueca = Concept.create({ id: "Enxaqueca" }),
    diabetes = Concept.create({ id: "Diabetes" }),
    alzheimer = Concept.create({ id: "Alzheimer" }),
    aids = Concept.create({ id: "AIDS" }),
    parkinson = Concept.create({ id: "Parkinson" }),
-   arritimiaCardiaca = Concept.create({ id: "Arritimia Cardíaca" }),
+   arritimia_cardiaca = Concept.create({ id: "Arritimia Cardíaca" }),
 
 
    //Sintomas
 
    febre = Concept.create({ id: "febre" }),
-   dor_de_cabeça = Concept.create({ id: "Dor de cabeça" }), //Favor Utilizar esse padrão de variável quando tiver mais de 1 palavra abc_de_dsldk
+   dor_de_cabeça = Concept.create({ id: "Dor de cabeça" }),
    tosse_seca = Concept.create({ id: "Tosse seca" }),
    cansaco = Concept.create({ id: "Cansaço" }),
-   dorDeGarganta = Concept.create({ id: "Dor de Garganta" }),
+   dor_de_garganta = Concept.create({ id: "Dor de Garganta" }),
    calafrios = Concept.create({ id: "Calafrios" }),
    espirros = Concept.create({ id: "Espirros" }),
-   congestaoNasal = Concept.create({ id: "Congestão Nasal" }),
-   corrimentoNasal = Concept.create({ id: "Corrimento Nasal" }),
-   obstrucaoNasal = Concept.create({ id: "Obstrução Nasal" }),
-   respiracaoRapida = Concept.create({ id: "Respiração Rápida" }),
-   faltaDeAr = Concept.create({ id: "Falta de Ar" }),
-   chiadoNoPeito = Concept.create({ id: "Chiado no Peito" }),
-   dorNoPeito = Concept.create({ id: "Dor no Peito" }),
-   dorNoBracoEsquerdo = Concept.create({ id: "Dor no Braço Esquerdo" }),
-   dorEmRepouso = Concept.create({ id: "Dor em Repouso" }),
-   fraquezaDeUmLadoDoCorpo = Concept.create({ id: "Fraqueza de um lado do corpo" }),
-   alteracaoOuPerdaDeVisao = Concept.create({ id: "Alteração ou perda de visão" }),
-   dificuldadeParaFalar = Concept.create({ id: "Dificuldade para falar" }),
-   rigidezNoPescoco = Concept.create({ id: "Rigidez no pescoço" }),
+   congestao_nasal = Concept.create({ id: "Congestão Nasal" }),
+   corrimento_nasal = Concept.create({ id: "Corrimento Nasal" }),
+   obstrucao_nasal = Concept.create({ id: "Obstrução Nasal" }),
+   respiracao_rapida = Concept.create({ id: "Respiração Rápida" }),
+   falta_de_ar = Concept.create({ id: "Falta de Ar" }),
+   chiado_no_peito = Concept.create({ id: "Chiado no Peito" }),
+   dor_no_peito = Concept.create({ id: "Dor no Peito" }),
+   dor_no_braco_esquerdo = Concept.create({ id: "Dor no Braço Esquerdo" }),
+   dor_em_repouso = Concept.create({ id: "Dor em Repouso" }),
+   fraqueza_de_um_lado_do_corpo = Concept.create({ id: "Fraqueza de um lado do corpo" }),
+   alteracao_ou_perda_de_visao = Concept.create({ id: "Alteração ou perda de visão" }),
+   dificuldade_para_falar = Concept.create({ id: "Dificuldade para falar" }),
+   rigidez_no_pescoco = Concept.create({ id: "Rigidez no pescoço" }),
    nausea = Concept.create({ id: "Náusea" }),
-   dorNosOlhos = Concept.create({ id: "Dor nos olhos" }),
-   sensibilidadeALuz = Concept.create({ id: "Sensibilidade a luz" }),
-   sedeExcessiva = Concept.create({ id: "Sede excessiva" }),
-   aumentoDeApetite = Concept.create({ id: "Aumento de apetite" }),
-   perdaDeMemoriaRecente = Concept.create({ id: "Perda de memória recente" }),
-   dificuldadeParaEncontrarPalavras = Concept.create({ id: "Dificuldade para encontrar palavras" }),
-   desorientacaoNoTempoENoEspaco = Concept.create({ id: "Desorientação no tempo e no espaço" }),
+   dor_nos_olhos = Concept.create({ id: "Dor nos olhos" }),
+   sensibilidade_a_luz = Concept.create({ id: "Sensibilidade a luz" }),
+   sede_excessiva = Concept.create({ id: "Sede excessiva" }),
+   aumento_de_apetite = Concept.create({ id: "Aumento de apetite" }),
+   perda_de_memoria_recente = Concept.create({ id: "Perda de memória recente" }),
+   dificuldade_para_encontrar_palavras = Concept.create({ id: "Dificuldade para encontrar palavras" }),
+   desorientacao_no_tempo_e_no_espaco = Concept.create({ id: "Desorientação no tempo e no espaço" }),
    diarreia = Concept.create({ id: "Diarréia" }),
-   suoresNoturnos = Concept.create({ id: "Suores noturnos" }),
-   rigidezMuscular = Concept.create({ id: "Rigidez Muscular" }),
+   suores_noturnos = Concept.create({ id: "Suores noturnos" }),
+   rigidez_muscular = Concept.create({ id: "Rigidez Muscular" }),
    tremores = Concept.create({ id: "Tremores" }),
-   alteracoesNaFala = Concept.create({ id: "Alterações na fala" }),
-   quedaDePressao = Concept.create({ id: "Queda de pressão" }),
+   alteracoes_na_fala = Concept.create({ id: "Alterações na fala" }),
+   queda_de_pressao = Concept.create({ id: "Queda de pressão" }),
    fadiga = Concept.create({ id: "Fadiga" }),
 
 
 
    // Verbs
-   has = Relation.create({id:"has"}),
-   whatHas = Relation.create({id:"what has",inverseFor:has});
-   
+   has = Relation.create({ id: "has" }),
+   whatHas = Relation.create({ id: "what has", inverseFor: has });
+
 //Knowledge Base          
 covid19
    .has(febre)
@@ -78,17 +78,71 @@ covid19
 gripe
    .has(febre)
    .has(dor_de_cabeça)
-   .has(dorDeGarganta);
+   .has(dor_de_garganta);
+
+pneumonia
+   .has(tosse_seca)
+   .has(febre)
+   .has(calafrios);
 
 resfriado
    .has(espirros)
-   .has(congestaoNasal)
-   .has(corrimentoNasal);
+   .has(congestao_nasal)
+   .has(corrimento_nasal);
 
-riniteAlergica
-   .has(corrimentoNasal)
-   .has(obstrucaoNasal)
+rinite_alergica
+   .has(corrimento_nasal)
+   .has(obstrucao_nasal)
    .has(espirros);
+
+asma
+   .has(falta_de_ar)
+   .has(respiracao_rapida)
+   .has(chiado_no_peito);
+
+ataque_cardiaco
+   .has(dor_no_peito)
+   .has(dor_no_braco_esquerdo)
+   .has(dor_em_repouso);
+
+derrame_cerebral
+   .has(fraqueza_de_um_lado_do_corpo)
+   .has(alteracao_ou_perda_de_visao)
+   .has(dificuldade_para_falar);
+
+meningite
+   .has(dor_de_cabeça)
+   .has(rigidez_no_pescoco)
+   .has(nausea);
+
+enxaqueca
+   .has(dor_nos_olhos)
+   .has(dor_de_cabeça)
+   .has(sensibilidade_a_luz);
+
+diabetes
+   .has(sede_excessiva)
+   .has(cansaco)
+
+alzheimer
+   .has(perda_de_memoria_recente)
+   .has(dificuldade_para_encontrar_palavras)
+   .has(desorientacao_no_tempo_e_no_espaco);
+
+aids
+   .has(diarreia)
+   .has(suores_noturnos)
+   .has(febre);
+
+parkinson
+   .has(rigidez_muscular)
+   .has(tremores)
+   .has(alteracoes_na_fala);
+
+arritimia_cardiaca
+   .has(falta_de_ar)
+   .has(queda_de_pressao)
+   .has(fadiga);
 
 //Export
 module.exports = {
@@ -97,18 +151,18 @@ module.exports = {
       gripe,
       pneumonia,
       resfriado,
-      riniteAlergica,
+      rinite_alergica,
       asma,
-      ataqueCardiaco,
-      derrameCerebral,
+      ataque_cardiaco,
+      derrame_cerebral,
       meningite,
       enxaqueca,
       diabetes,
       alzheimer,
       aids,
       parkinson,
-      arritimiaCardiaca,
-      faltaDeAr,
+      arritimia_cardiaca,
+      falta_de_ar,
 
    },
 
@@ -117,39 +171,37 @@ module.exports = {
       dor_de_cabeça,
       tosse_seca,
       cansaco,
-      dorDeGarganta,
+      dor_de_garganta,
       calafrios,
       espirros,
       calafrios,
-      congestaoNasal,
-      corrimentoNasal,
-      obstrucaoNasal,
-      respiracaoRapida,
-      respiracaoRapida,
-      chiadoNoPeito,
-      dorNoBracoEsquerdo,
-      dorNoPeito,
-      dorEmRepouso,
-      fraquezaDeUmLadoDoCorpo,
-      alteracaoOuPerdaDeVisao,
-      dificuldadeParaFalar,
-      rigidezNoPescoco,
+      congestao_nasal,
+      corrimento_nasal,
+      obstrucao_nasal,
+      respiracao_rapida,
+      chiado_no_peito,
+      dor_no_braco_esquerdo,
+      dor_no_peito,
+      dor_em_repouso,
+      fraqueza_de_um_lado_do_corpo,
+      alteracao_ou_perda_de_visao,
+      dificuldade_para_falar,
+      rigidez_no_pescoco,
       nausea,
-      dorNosOlhos,
-      sensibilidadeALuz,
-      sedeExcessiva,
-      aumentoDeApetite,
-      aumentoDeApetite,
-      dificuldadeParaEncontrarPalavras,
-      desorientacaoNoTempoENoEspaco,
+      dor_nos_olhos,
+      sensibilidade_a_luz,
+      sede_excessiva,
+      aumento_de_apetite,
+      dificuldade_para_encontrar_palavras,
+      desorientacao_no_empo_e_no_espaco,
       diarreia,
-      suoresNoturnos,
-      rigidezMuscular,
+      suores_noturnos,
+      rigidez_muscular,
       tremores,
-      alteracoesNaFala,
-      quedaDePressao,
+      alteracoes_na_fala,
+      queda_de_pressao,
       fadiga,
-      perdaDeMemoriaRecente,
+      perda_de_memoria_recente,
 
    },
 
